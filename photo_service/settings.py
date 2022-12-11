@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 LOCAL_APPS = ["apps.core", "apps.library"]
+THIRD_PARTY = ["rest_framework"]
 BUILTIN_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -40,7 +41,7 @@ BUILTIN_APPS = [
     "django.contrib.staticfiles",
 ]
 
-INSTALLED_APPS = BUILTIN_APPS + LOCAL_APPS
+INSTALLED_APPS = BUILTIN_APPS + LOCAL_APPS + THIRD_PARTY
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
