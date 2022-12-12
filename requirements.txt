@@ -11,11 +11,18 @@ django==4.1.4
     #   -r requirements.in
     #   django-filter
     #   djangorestframework
+    #   drf-extra-fields
 django-filter==22.1
     # via -r requirements.in
 djangorestframework==3.14
+    # via
+    #   -r requirements.in
+    #   drf-extra-fields
+drf-extra-fields==3.4.1
     # via -r requirements.in
 markdown==3.4.1
+    # via -r requirements.in
+pillow==9.3.0
     # via -r requirements.in
 pytz==2022.6
     # via djangorestframework

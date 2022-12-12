@@ -4,7 +4,7 @@ from apps.core.models import LocationAbstractModel, CreatedUpdatedAtAbstract
 
 
 class Photo(LocationAbstractModel, CreatedUpdatedAtAbstract):
-    file = models.FileField(upload_to="photo")
+    file = models.ImageField(upload_to="photo")
     description = models.TextField(null=True, blank=True)
     people = models.ManyToManyField("library.PersonInPhoto")
     owner = models.ForeignKey(

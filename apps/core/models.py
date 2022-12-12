@@ -2,8 +2,12 @@ from django.db import models
 
 # Create your models here.
 class LocationAbstractModel(models.Model):
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
+    latitude = models.DecimalField(
+        max_digits=9, decimal_places=6, null=True, blank=True
+    )
+    longitude = models.DecimalField(
+        max_digits=9, decimal_places=6, null=True, blank=True
+    )
 
     def location(self):
         return self.latitude, self.longitude

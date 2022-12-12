@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 LOCAL_APPS = ["apps.core", "apps.library"]
-THIRD_PARTY = ["rest_framework"]
+THIRD_PARTY = ["rest_framework", "django_filters"]
 BUILTIN_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -130,11 +130,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
-    ]
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
 }
