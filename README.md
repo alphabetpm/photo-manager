@@ -2,7 +2,7 @@
 
 Develop API for photo manager which can upload photos and get a list of them with several filters
 
-API Documentation is located in the following path docs/Photo Manager API v1.postman_collection.json you can easily import to Postman and start using
+API Documentation is located in the following path **docs/Photo Manager API v1.postman_collection.json** you can easily import to Postman and start using
 
 ## Installation Web Service
 
