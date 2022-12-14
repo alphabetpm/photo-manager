@@ -14,6 +14,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Before use should migrate db schema 
+```bash
+python manage.py migrate
+```
+
 ## Create user to access admin panel and use api
 
 ```bash
